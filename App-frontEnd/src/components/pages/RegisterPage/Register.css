@@ -1,0 +1,60 @@
+.backGround{
+    position: absolute;
+    background: black;
+    height: 100%;
+    width: 100%;
+}
+
+.RegisterContainer {
+    position: absolute;
+    background: white;
+    border-radius: 25px;
+    top: 20%;
+    left: 35.5%;
+    height: 80%;
+    width: 26%;
+}
+
+
+@media only screen and (max-width: 1360px) {
+    .RegisterContainer {
+        position: absolute;
+        background: white;
+        border-radius: 25px;
+        top: 15%;
+        left: 37.5%;
+        height: 65%;
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+    .RegisterContainer {
+        position: absolute;
+        background: white;
+        border-radius: 25px;
+        top: 20%;
+        left: 17.5%;
+        height: 50%;
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1360px) {
+    .RegisterContainer {
+        position: absolute;
+        background: white;
+        border-radius: 25px;
+        top: 15%;
+        left: 33.5%;
+        height: 65%;
+        width: 30%;
+    }
+}
+
+
+
+.ui.image.LogoReg{
+    position: relative;
+    top:5%;
+}
