@@ -7,8 +7,8 @@ import {UserLoginModel} from "../Models/UserLoginModel";
 
 
 
-const ipServer = "https://app-backserver1.onrender.com/app/v1";
-
+// const ipServer = "https://app-backserver1.onrender.com/app/v1";
+const ipServer = "http://localhost:8080/app/v1";
 export class UserService {
     login(userReq: UserLoginModel) {
 
