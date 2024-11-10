@@ -8,6 +8,7 @@ import {ApprovalModal} from "../../Modals/Dialog/ApprovementModal/ApprovalModal"
 import DropdownButton from "../../Inputs/Buttons/DropdownButton/DropdownButton";
 import {ChoiceModal, ModalPropsChoice} from "../../Modals/Dialog/ChoiceModal/ChoiceModal";
 import {NotificationModal} from "../../Modals/Dialog/NotificationModal/NotificationModal";
+import {UploadButton} from "../../Inputs/Buttons/UploadButton/UploadButton";
 
 
 export const HomePage = () => {
