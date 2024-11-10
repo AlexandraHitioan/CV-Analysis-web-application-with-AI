@@ -18,6 +18,8 @@
     outline: none;
 }
 
+
+
 .ui.input.PasswordLogIn{
     position: absolute;
     border-top: black;
@@ -30,6 +32,18 @@
     top:55%;
     outline: none;
 }
+
+.ui.input.PasswordLogIn>input{
+    background: transparent !important;
+    border: none !important;
+}
+
+.ui.input.EmailLogIn>input{
+    background: transparent !important;
+    border: none !important;
+}
+
+
 
 .ui.animated.button.SendButtonLogIn{
     top:80%;
