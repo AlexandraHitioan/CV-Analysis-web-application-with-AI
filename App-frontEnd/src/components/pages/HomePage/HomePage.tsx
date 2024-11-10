@@ -9,6 +9,7 @@ import DropdownButton from "../../Inputs/Buttons/DropdownButton/DropdownButton";
 import {ChoiceModal, ModalPropsChoice} from "../../Modals/Dialog/ChoiceModal/ChoiceModal";
 import {NotificationModal} from "../../Modals/Dialog/NotificationModal/NotificationModal";
 import {UploadButton} from "../../Inputs/Buttons/UploadButton/UploadButton";
+import {DocumentForm} from "../../Inputs/Forms/DocumentForm/DocumentForm";
 
 
 export const HomePage = () => {
@@ -33,6 +34,7 @@ export const HomePage = () => {
         <div>
             <div className={"backGround"}>
                 <div className={"appView"}>
+
                     {/*<Button onClick={() => setState(true)}>*/}
                     {/*    ApprovementModal*/}
                     {/*</Button>*/}
