@@ -1,11 +1,17 @@
 .backGround{
     position: absolute;
-    background: black;
+    background: #1B2934;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: absolute;
+    background-image:url("C:/Users/HELLO/Downloads/bg proiectColectiv.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Ocupă toată înălțimea paginii */
+    width: 100vw; /* Ocupă toată lățimea paginii */
 }
 
 .navBar{
