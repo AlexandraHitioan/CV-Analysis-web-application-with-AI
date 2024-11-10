@@ -36,7 +36,7 @@ export const LogIn = () => {
                         </ButtonContent>
                     </Button>
                 </div>
-                <div className="rightSection">
+                <div>
                     <div className="LogInContainerLogIn">
                         <Image
                             src="https://cdn.discordapp.com/attachments/1219648191474176000/1300441864662683729/iepuras_degerat.png?ex=67222bdd&is=6720da5d&hm=8000a6770caef12b598b6175abe7a1390247fdd1acbedd071c61d8b996b46aa7&"
