@@ -11,10 +11,11 @@ export const LogIn = () => {
         navigate("/register");
     }
 
+    const image = "https://cdn.discordapp.com/attachments/1219648191474176000/1300441864662683729/iepuras_degerat.png?ex=6720da5d&is=671f88dd&hm=c3f2ff3c56cfa5e435d39a497eba03d5394c970d3ff3d648f30479244cfe1177&"
     return (
         <div className={"backGround"}>
             <div className={"LogInContainerLogIn"}>
-                <Image src='https://react.semantic-ui.com/images/wireframe/image.png' className={"LogoLogIn"} size='small' wrapped />
+                <Image src={image} className={"LogoLogIn"} size='small' wrapped />
                 <LogInForm></LogInForm>
                 <a onClick={navigateToRegister} className={"hyperToRegister"}>Don't have an account?go to register</a>
             </div>
