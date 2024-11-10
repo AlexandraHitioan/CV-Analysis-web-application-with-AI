@@ -51,8 +51,8 @@ export const UploadButton = (props:UploadButtonInterface) => {
                 onChange={handleFileChange}
                 accept={props.fileType}
             />
-            <Button onClick={handleButtonClick} primary>
-                Upload File
+            <Button icon={"upload"} label={"Upload File"} style={{width: "100%",left: "3vw", position: "relative"}} onClick={handleButtonClick} primary>
+
             </Button>
         </div>
     );
