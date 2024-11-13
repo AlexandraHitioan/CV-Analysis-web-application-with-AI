@@ -13,6 +13,7 @@ import {NotificationService} from "../../../services/api/NotificationService";
 import {Button, Icon} from "semantic-ui-react";
 
 import "./MainPage.css"
+import {AvatarPage} from "../AvatarPage/AvatarPage";
 
 
 export const MainPage = () => {
@@ -42,6 +43,7 @@ export const MainPage = () => {
                         <Route element={<ProtectedRoute/>}>
                             <Route path="/" element={<HomePage/>}/>
                             <Route path="/TablePage" element={<TablePage/>}/>
+                            <Route path="/Interview" element={<AvatarPage/>}/>
                         </Route>
                         <Route element={<PublicRoute/>}>
                             <Route path="/login" element={<LogIn/>}/>

@@ -38,6 +38,15 @@ export const NavBar = () =>{
                 Page 3
             </MenuItem>
 
+            <MenuItem
+                name='Interview'
+                active={false}
+                onClick={() => { navigateTo("/Interview") }}
+            >
+                <Icon name='user' />
+                Interview
+            </MenuItem>
+
 
             <MenuItem className={"signOut"}
                 name='Sign out'
