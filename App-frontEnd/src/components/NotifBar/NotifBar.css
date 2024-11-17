@@ -1,7 +1,7 @@
 .NotificationDiv{
     position: absolute;
     z-index: 1;
-    background: #38405A;
+    background: #1B2134;
     width: 25.5%;
     right: 0;
     height: 100%;
@@ -10,8 +10,8 @@
     position : relative;
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
-    font-size: 24px;
-    color: #919DC3;
+    font-size: 28px;
+    color: #C1CEF5;
     top: 5%;
     left: 10%;
 }
@@ -37,13 +37,14 @@
     overflow: scroll;
     overflow-y: hidden;
     overflow-x: hidden;
+    background-color: #1B2134
 }
 
 .NotificationItemDiv{
-    border-radius: 20px;
+    border-radius: 10px;
     position: relative;
     padding-top: 45px;
-    background: #E6E5E5;
+    background: #28304B;
     height: 90px;
     cursor: pointer;
 }
@@ -53,10 +54,12 @@
 }
 
 .ui.header.NotificationItemHeader{
+    font-family: 'Poppins', sans-serif;
     padding-left: 10px;
     position: relative;
     top: -20px;
-    font-size: 20px;
+    font-size: 18px;
+    color: #C1CEF5;
 }
 
 .ui.divider.NotificationItemDivider{
@@ -71,4 +74,9 @@
     height: 70px;
     background: transparent;
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    color: #919DC3;
+    opacity: 75%;
 }
