@@ -18,7 +18,7 @@ export const UploadButton = (props:UploadButtonInterface) => {
 
     useEffect(()=>{
         if(fileBase64 !== "")
-            console.log(fileBase64)
+            props.settingFunction(fileBase64)
     },[fileBase64])
 
     const handleFileChange = (event:any) => {
