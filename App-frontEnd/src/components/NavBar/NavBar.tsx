@@ -23,10 +23,10 @@ export const NavBar = () =>{
             <MenuItem
                 name='Page 2'
                 active={false}
-                onClick={() => { navigateTo("/TablePage") }}
+                onClick={() => { navigateTo("/DocumentPage") }}
             >
                 <Icon name='file archive outline' />
-                Page 2
+                DocumentPage
             </MenuItem>
 
             <MenuItem
@@ -36,6 +36,15 @@ export const NavBar = () =>{
             >
                 <Icon name='file archive outline' />
                 Page 3
+            </MenuItem>
+
+            <MenuItem
+                name='Interview'
+                active={false}
+                onClick={() => { navigateTo("/Interview") }}
+            >
+                <Icon name='user' />
+                Interview
             </MenuItem>
 
 

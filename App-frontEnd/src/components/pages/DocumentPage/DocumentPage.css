@@ -1,0 +1,46 @@
+.pageDiv{
+    position: absolute;
+    left:92px;
+    width: 100%;
+    height: 100%;
+}
+.tableDiv{
+    left:2.5vw;
+    position: relative;
+    top:30%;
+    width: 90%;
+    padding-left: 30px;
+}
+
+@media only screen and (max-width: 1360px) {
+
+    .tableDiv {
+        position: relative;
+        top: 30%;
+        width: 90%;
+        padding-left: 30px;
+    }
+}
+
+.ui.divider.divider{
+    position: relative;
+    top:25%;
+    width: 90%;
+    left:2.2%;
+}
+.titleLabel{
+    left: 3%;
+    position: absolute;
+    top: 10%;
+    font-size: 35px;
+    font-style: oblique;
+}
+
+.activeTitleButton{
+    /*left: 3%;*/
+    left:40%;
+    position: absolute;
+    top: 20%;
+    font-size: 35px;
+    font-style: oblique;
+}
