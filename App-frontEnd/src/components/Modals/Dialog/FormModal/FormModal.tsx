@@ -17,7 +17,7 @@ export interface ModalFormProps {
     style: any
 }
 
-function BasicModal(props: ModalFormProps) {
+function FormModal(props: ModalFormProps) {
 
     return (
         <Modal
@@ -39,4 +39,4 @@ function BasicModal(props: ModalFormProps) {
     )
 }
 
-export default BasicModal
+export default FormModal
