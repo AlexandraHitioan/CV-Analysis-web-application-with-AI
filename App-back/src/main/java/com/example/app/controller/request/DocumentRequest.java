@@ -5,7 +5,9 @@ import com.example.app.domain.Document;
 import jakarta.persistence.Column;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,7 +19,7 @@ public class DocumentRequest {
     private String name;
 
     @NonNull
-    private LocalDateTime date;
+    private String date;
 
     @NonNull
     private String data;
@@ -28,7 +30,14 @@ public class DocumentRequest {
     @NonNull
     private String emailUser;
 
+
     public Document returnDocumentEntity(AccountCredentials user) {
-        return new Document(name,date,data,base64,user);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+
+        LocalDate localDate = LocalDate.parse(date, formatter);
+
+        // If needed, convert LocalDate to LocalDateTime (e.g., add default time)
+        LocalDateTime localDateTime = localDate.atStartOfDay();
+        return new Document(name,localDateTime,data,base64,user);
     }
 }
