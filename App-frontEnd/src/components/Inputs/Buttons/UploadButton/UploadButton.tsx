@@ -51,8 +51,13 @@ export const UploadButton = (props:UploadButtonInterface) => {
                 onChange={handleFileChange}
                 accept={props.fileType}
             />
-            <Button icon={"upload"} label={"Upload File"} style={{width: "100%",left: "3vw", position: "relative"}} onClick={handleButtonClick} primary>
-
+            <Button icon={"upload"}
+                    label={
+                       <span style={{ backgroundColor:"#C1CEF5", fontFamily:"Poppins, sans-serif", fontSize: "16p", color: "#28304B", paddingTop: "12px", paddingLeft: "10px", paddingRight: "10px", paddingBottom: "10px", borderTopRightRadius: "5px", borderBottomRightRadius:"5px"}}>
+                             Upload file
+                       </ span>
+                    }
+                    style={{width: "100%",left: "0.2vw", top: "1.5vw", position: "relative", color: "#4260D8"}} onClick={handleButtonClick} primary>
             </Button>
         </div>
     );
