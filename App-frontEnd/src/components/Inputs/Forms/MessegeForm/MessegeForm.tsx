@@ -15,9 +15,9 @@ export const MessegeForm = (props:MessegeFormInternface) =>{
     return (
         <div style={{
             position: "relative",
-            bottom: "-68vh",
-            width: "70vh",
-            left: "23vh",
+            bottom: "-105%",
+            // width: "70vh",
+            // left: "23vw",
         }}>
             <Input className={"MessegeInput"} value={msg} onChange={(event)=>{setMsg(event.target.value)}}></Input>
             <Button onClick={()=>{

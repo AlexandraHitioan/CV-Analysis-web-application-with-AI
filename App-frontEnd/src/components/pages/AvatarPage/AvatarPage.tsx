@@ -112,6 +112,7 @@ export const AvatarPage = () => {
     }
 
     return (
+        <div className={"backGround"}>
         <div className={"avatarContainer"}>
             <div className={"avatarMain"}>
                 <div className="videoSectionWrap">
@@ -133,6 +134,7 @@ export const AvatarPage = () => {
                     }}>Close</Button>}
 
             </div>
+        </div>
         </div>
     )
 }
