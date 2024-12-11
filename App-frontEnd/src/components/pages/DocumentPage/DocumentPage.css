@@ -1,24 +1,37 @@
 .pageDiv{
+    /*background-image: url("C:/Users/HELLO/Desktop/ProiectColectiv/App-frontEnd/public/bg proiectColectivDocuments.png");*/
+    background-image: url("C:/Users/HELLO/Desktop/ProiectColectiv/App-frontEnd/public/bg proiectColectiv.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: absolute;
     left:92px;
     width: 100%;
     height: 100%;
 }
+
 .tableDiv{
-    left:2.5vw;
+    left: 100px;
     position: relative;
     top:30%;
     width: 90%;
     padding-left: 30px;
 }
 
-@media only screen and (max-width: 1360px) {
+.title{
+    position: absolute;
+    top: 15%;
+    left: 6%;
+    width: 600px;
+}
+@media only screen and (min-width: 412px) {
 
     .tableDiv {
         position: relative;
-        top: 30%;
+        top: 45%;
         width: 90%;
         padding-left: 30px;
+        left: 120px;
     }
 }
 
@@ -28,19 +41,38 @@
     width: 90%;
     left:2.2%;
 }
+
 .titleLabel{
-    left: 3%;
     position: absolute;
-    top: 10%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #C1CEF5;
+    left: 10.5%;
+    top: 30%;
     font-size: 35px;
-    font-style: oblique;
 }
 
-.activeTitleButton{
-    /*left: 3%;*/
-    left:40%;
+.ui.button.activeTitleButton{
+    top:-50%;
+    width: 180px;
+    height: 40px;
+    left: 74%;
     position: absolute;
-    top: 20%;
-    font-size: 35px;
-    font-style: oblique;
+    background-color: #4260D8;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: white;
+    border-radius: 7px;
 }
+
+.bodyTextDocuments{
+    position : relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: #919DC3;
+    text-align: left;
+    position: relative;
+    top : 85px;
+    left: 10.5%;
+}
+
