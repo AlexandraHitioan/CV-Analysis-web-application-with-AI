@@ -15,8 +15,13 @@ export const DocumentForm = (setFileForward:any) =>{
     },[file])
     return (
         <div style={{display:"grid",width:"17vw"}}>
-            <Input placeholder={"Document Name"} value={documentName} onChange={(e)=>{setDocumentName(e.target.value)}}/>
-            <Divider/>
+            <Input className="inputDocument" placeholder={"Document Name"} value={documentName} onChange={(e)=>{setDocumentName(e.target.value)}}
+            style ={{
+                backgroundColor:"transparent",
+                border: "solid, 2px, #C1CEF5",
+                borderRadius: "7px",
+                width: "22vw"
+            }}/>
             <UploadButton settingFunction={setFile} fileType={".pdf"}></UploadButton>
         </div>
     )

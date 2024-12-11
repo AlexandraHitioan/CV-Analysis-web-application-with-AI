@@ -1,4 +1,8 @@
 import {Icon} from "semantic-ui-react";
+import "./DocumentTable.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+
 
 export interface DocumentTableProps{
     tableColumnNames:string[];
@@ -10,9 +14,9 @@ export const DocumentTable = (props:any) => {
     const data = props.props.tableColumnNames;
     const info = props.props.tableColumnValues;
     return (
-        <table className="ui celled table">
-            <thead>
-            <tr>
+        <table >
+            <thead className="tableHead">
+            <tr className = "headCell">
                 {
                     data!=undefined?data.map((item:any, index:any) => (
                         <th>{data[index]}</th>
@@ -33,9 +37,14 @@ export const DocumentTable = (props:any) => {
                         }
                         <td>
                             {/*<Icon style={{cursor:"pointer"}} size={"big"} color={"blue"} name={"edit"}></Icon>*/}
-                            <Icon style={{cursor:"pointer"}} size={"big"} color={"red"} name={"remove"}
-                                  onClick={()=>{props.props.deleteDocument(index)}}
-                            ></Icon>
+                            {/*<Icon style={{cursor:"pointer"}} size={"big"} color={"red"} name={"remove"}*/}
+                            {/*      onClick={()=>{props.props.deleteDocument(index)}}*/}
+                            {/*></Icon>*/}
+                            <FontAwesomeIcon
+                                icon={faTrash}
+                                style={{ cursor: "pointer", color: "white", fontSize: "20px" }}
+                                onClick={() => props.props.deleteDocument(index)}
+                            />
                         </td>
                     </tr>
                 )):(<div/>)

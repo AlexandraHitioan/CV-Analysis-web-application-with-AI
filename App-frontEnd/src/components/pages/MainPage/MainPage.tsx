@@ -13,8 +13,8 @@ import {NotificationService} from "../../../services/api/NotificationService";
 import {Button, Icon} from "semantic-ui-react";
 
 import "./MainPage.css"
-import {AvatarPage} from "../AvatarPage/AvatarPage";
 import {DocumentPage} from "../DocumentPage/DocumentPage";
+import {AvatarPage} from "../AvatarPage/AvatarPage";
 
 
 export const MainPage = () => {
