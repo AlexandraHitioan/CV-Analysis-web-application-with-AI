@@ -14,182 +14,101 @@
     width: 100vw; /* Ocupă toată lățimea paginii */
 }
 
-.navBar{
-    position: absolute;
-    z-index: 1;
-    /*width: 1vh;*/
-    height: 100%;
-    background: #171717;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-timing-function: ease-in-out;
-    visibility: visible !important;
-
+.pageDiv {
+    /*background-image: url("../../../../public/bg proiectColectiv.png");*/
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*position: absolute;*/
+    /*left: 92px;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    background: transparent;
 }
 
-.appView {
+.tableTitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #C1CEF5;
+}
+
+
+.tableDiv {
+    left: 100px;
     position: relative;
-    /*background: white;*/
-    border-radius: 25px;
-    height: 80vh !important; /* Set height relative to viewport height */
-    width: 75vw !important;/* Set width relative to viewport width */
-    max-height: 1024px; /* Prevent it from exceeding original height */
-    max-width: 1440px; /* Prevent it from exceeding original width */
-    margin: 5vh auto; /* Center it vertically and horizontally */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    transition: all 0.3s ease; /* Smooth transitions for resizing */
-    top: 5%; /* Adjust the distance from the navbar */
-    left: 5%; /* Adjust the distance from the navbar */
-    right: 5%; /* Adjust the distance from the navbar */
-    bottom: 5%; /* Adjust the distance from the navbar */
-
+    top: 30%;
+    width: 90%;
+    padding-left: 30px;
 }
 
-.textContainer {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    gap: 1.5rem; /* Space between text elements */
-    padding: 2rem; /* Space around the container */
-    max-width: 90%; /* Limit container width */
-    margin: 0 auto; /* Center container in the viewport */
-    text-align: center; /* Center-align text */
+.title {
+    position: absolute;
+    top: 15%;
+    left: 6%;
+    width: 600px;
 }
 
-.h1homePage {
-    font-family: "Poppins", sans-serif;
-    font-weight: 900; /* Bold font */
-    font-size: 2.5vw; /* Font size scales with viewport width */
+@media only screen and (min-width: 412px) {
+    .tableDiv {
+        position: relative;
+        top: 45%;
+        width: 90%;
+        padding-left: 30px;
+        left: 120px;
+    }
+}
+
+.ui.divider.divider {
+    position: relative;
+    top: 25%;
+    width: 90%;
+    left: 2.2%;
+}
+
+.titleLabel {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     color: #C1CEF5;
-    position: absolute;
-    top: 5%; /* Position dynamically based on viewport height */
-    left: 5%; /* Position dynamically based on viewport width */
-    transition: all 0.3s ease; /* Smooth transitions for resizing */
+    left: 10.5%;
+    top: 30%;
+    font-size: 35px;
 }
 
-.h2helloUser{
-    font-family: "Poppins", sans-serif;
-    font-weight: 900; /* Bold font */
-    font-size: 2.5vw; /* Font size scales with viewport width */
-    color: #C1CEF5;
+.ui.button.activeTitleButton {
+    top: -50%;
+    width: 180px;
+    height: 40px;
+    left: 74%;
     position: absolute;
-    top: 10%; /* Position dynamically based on viewport height */
-    left: 29vw; /* Position dynamically based on viewport width */
-    transition: all 0.3s ease; /* Smooth transitions for resizing */
+    background-color: #4260D8;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: white;
+    border-radius: 7px;
 }
 
-.notificationText{
-    position : absolute;
+.bodyTextDocuments {
+    position : relative;
     font-family: "Poppins", sans-serif;
-    font-size: 1vw;
+    font-size: 13px;
     color: #919DC3;
-    text-align: center;
-    position: absolute;
-    top : 30%;
-    left : 30vw;
+    text-align: left;
+    top : 85px; /* Adjusted if needed based on content */
+    left: 10.5%;
 }
 
-.informationText{
-    position : absolute;
-    font-family: "Poppins", sans-serif;
-    font-size: 1vw;
-    color: #919DC3;
-    text-align: center;
-    position: absolute;
-    bottom: 5%;
-    left : 21vw;
+/* Additional styles for CompanyDocumentPage */
+.jobUploadButton {
+    /* Style for job upload button if needed */
+    margin-top: 20px; /* Add spacing if necessary */
 }
 
-/* For Larger Screens */
-@media only screen and (min-width: 1440px) {
-    .appView {
-        height: 60vh; /* Maintain fixed height */
-        width: 55vw; /* Maintain fixed width */
-        margin: 50px auto; /* Center it with margin for large screens */
-        left: 5%; /* Adjust distance from navbar */
-        top: 5%; /* Maintain top position */
-        bottom: 5%; /* Maintain bottom position */
-        right: 5%;
-    }
-    .h1homePage {
-        font-size: 2vw; /* Maintain font size */
-        left: 2.5vw; /* Adjust based on navbar width */
-        top: 5%; /* Maintain top position */
-    }
-}
-
-/* Smaller Screens (Tablets) */
-@media only screen and (max-width: 1024px) {
-    .appView {
-        height: 90vh;
-        width: 95vw;
-        margin: 2vh auto;
-        /*margin-left: 100px; !* Adjust distance from navbar *!*/
-        left: 5%;
-        right: 5%;
-        bottom: 5%;
-        top: 5%;
-    }
-    .h1homePage {
-        font-size: 2vw;
-        left: 1.5vw; /* Adjust based on smaller navbar width */
-        top: 5%;
-    }
-}
-
-/* Extra Small Screens (Phones) */
-@media only screen and (max-width: 768px) {
-    .appView {
-        height: 95vh;
-        width: 100vw;
-        border-radius: 15px; /* Reduce border radius for smaller screens */
-        margin: 1vh 0;
-        /*margin-left: 80px; !* Adjust distance from navbar *!*/
-        left: 5%;
-        right: 5%;
-        bottom: 5%;
-        top: 5%;
-    }
-    .h1homePage {
-        font-size: 2vw;
-        left: 1vw; /* Adjust for even smaller navbar width */
-        top: 5%;
-        allign: center;
-    }
-}
-
-
-@keyframes fadeIn {
-    0% {
-        transform: scale(0);
-        opacity: 0.0;
-    }
-    60% {
-        transform: scale(1.1);
-    }
-    80% {
-        transform: scale(0.9);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        -webkit-transform: scale(0);
-        opacity: 0.0;
-    }
-    60% {
-        -webkit-transform: scale(1.1);
-    }
-    80% {
-        -webkit-transform: scale(0.9);
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: scale(1);
-        opacity: 1;
-    }
+.tableHeader {
+    /* Style for table headers */
+    font-family:'Poppins', sans-serif;
+    font-weight:bold;
+    color:#C1CEF5;
+    font-size:20px;
+    margin-bottom:10px; /* Space below headers */
 }
