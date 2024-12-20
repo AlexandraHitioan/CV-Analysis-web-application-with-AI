@@ -7,7 +7,7 @@ import {
 } from "../../../services/hygen/AvatarService";
 import {useEffect, useState} from "react";
 import "./AvatarPage.css"
-import {Button} from "semantic-ui-react";
+import {Button, TextArea} from "semantic-ui-react";
 import {MessegeForm} from "../../Inputs/Forms/MessegeForm/MessegeForm";
 
 export const AvatarPage = () => {
@@ -121,6 +121,7 @@ export const AvatarPage = () => {
                         <canvas id="canvasElement" className="videoEle hide"></canvas>
                     </div>
                 </div>
+                <TextArea>Push me!</TextArea>
                 <MessegeForm sendMsg={talk}></MessegeForm>
                 {!connection ? <Button style={{position: "relative", zIndex: 2}} onClick={() => {
                         doInit()

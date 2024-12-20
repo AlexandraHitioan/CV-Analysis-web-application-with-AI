@@ -35,7 +35,7 @@
     max-height: 1024px; /* Prevent it from exceeding original height */
     max-width: 1440px; /* Prevent it from exceeding original width */
     margin: 5vh auto; /* Center it vertically and horizontally */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     transition: all 0.3s ease; /* Smooth transitions for resizing */
     top: 5%; /* Adjust the distance from the navbar */
     left: 5%; /* Adjust the distance from the navbar */
@@ -69,11 +69,11 @@
 .h2helloUser{
     font-family: "Poppins", sans-serif;
     font-weight: 900; /* Bold font */
-    font-size: 2.5vw; /* Font size scales with viewport width */
+    font-size: 4vw; /* Font size scales with viewport width */
     color: #C1CEF5;
     position: absolute;
     top: 10%; /* Position dynamically based on viewport height */
-    left: 29vw; /* Position dynamically based on viewport width */
+    left: 19vw; /* Position dynamically based on viewport width */
     transition: all 0.3s ease; /* Smooth transitions for resizing */
 }
 
@@ -85,7 +85,7 @@
     text-align: center;
     position: absolute;
     top : 30%;
-    left : 30vw;
+    left : 27vw;
 }
 
 .informationText{
@@ -96,7 +96,7 @@
     text-align: center;
     position: absolute;
     bottom: 5%;
-    left : 21vw;
+    left : 18vw;
 }
 
 /* For Larger Screens */

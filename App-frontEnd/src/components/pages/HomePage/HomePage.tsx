@@ -38,8 +38,8 @@ export const HomePage = () => {
             <div className={"backGround"}>
                 <div className={"appView"}>
                     <div className="textContainer">
-                        <h1 className="h1homePage">Home Page</h1>
-                        <h2 className="h2helloUser">Hello *USER*!</h2>
+                        {/*<h1 className="h1homePage">Home Page</h1>*/}
+                        <h2 className="h2helloUser">Welcome, user!</h2>
                         <p className="notificationText">You have *N* notifications!</p>
                         <p className="informationText">
                             Document Page: Upload your document here! <br />
