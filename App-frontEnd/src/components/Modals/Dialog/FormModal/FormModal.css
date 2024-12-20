@@ -3,7 +3,13 @@
     color: #C1CEF5 !important;
     font-family: 'Poppins', 'sans-serif' !important;
     font-weight: bold;
-
+    position: absolute;
+    bottom: 2vh;
+    right: 2vw;
+    margin: 1em;
+    padding: 1em;
+    /*border-radius: 5px;*/
+    /*cursor: pointer;*/
 }
 
 .ui.modal.actions >.modalButton {
