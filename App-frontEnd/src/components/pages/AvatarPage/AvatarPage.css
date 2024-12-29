@@ -70,6 +70,20 @@
     display: flex;
 }
 
+
+.sentMessage{
+    background-color: rgba(56, 64, 90, 0.7);
+    border-color: transparent;
+    color: #C1CEF5;
+    font-family: "Poppins", "sans-serif";
+    border-radius: 7px;
+    padding: 10px;
+    position: relative;
+    top: 40vw;
+    left: -10vw;
+}
+
+
 @media (max-width: 600px) {
     .videoWrap .videoEle {
         width: 180%;

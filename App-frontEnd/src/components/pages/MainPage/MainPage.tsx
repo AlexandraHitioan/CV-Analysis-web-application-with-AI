@@ -18,6 +18,7 @@ import { AvatarPage } from "../AvatarPage/AvatarPage";
 import { CompanyDocumentPage } from "../DocumentPage/CompanyDocumentPage";
 import {CompanyPage} from "../Companys/CompanyPage";
 import {EmployPage} from "../Employs/EmployPage"; // Import CompanyDocumentPage
+import {Interview} from "../InterviewPage/Interview";
 
 export const MainPage = () => {
     const [pressed, setPressed] = useState(false);
@@ -47,7 +48,8 @@ export const MainPage = () => {
                         <Route element={<ProtectedRoute />}>
                             <Route path="/" element={<HomePage />} />
                             <Route path="/DocumentPage" element={<DocumentPage />} />
-                            <Route path="/Interview" element={<AvatarPage />} />
+                            <Route path="/Interview" element={<Interview />} />
+                            <Route path="/Avatar" element={< AvatarPage/>} />
                             <Route path="/CompanyDocumentPage" element={<CompanyDocumentPage />} /> {/* Add route for CompanyDocumentPage */}
                             <Route path="/Companys" element={<CompanyPage />} />
                             <Route path="/EmployPage" element={<EmployPage />} />

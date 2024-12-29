@@ -9,6 +9,7 @@ import {useEffect, useState} from "react";
 import "./AvatarPage.css"
 import {Button, TextArea} from "semantic-ui-react";
 import {MessegeForm} from "../../Inputs/Forms/MessegeForm/MessegeForm";
+import {useNavigate} from "react-router-dom";
 
 export const AvatarPage = () => {
     const avatarId = "Kristin_public_2_20240108";
@@ -19,7 +20,7 @@ export const AvatarPage = () => {
     const [canvasElement, setCanvasElement] = useState<Element | null>(null);
     const [visibleCanvasElement, setVisibleCanvasElement] = useState(false);
     const background = "url(\"'https://www.cleanpng.com/png-background-transparent-png-clipart-4998260/'\") center / contain no-repeat"
-
+    const navigate = useNavigate();
 
     const updateStatus = (message: any, priority?: number) => {
         if (priority === undefined) {
@@ -111,6 +112,14 @@ export const AvatarPage = () => {
         }
     }
 
+    const navigateToInterview = () => {
+        navigate("/Interview")
+    }
+
+    useEffect (() => {
+        doInit()
+    }, []);
+
     return (
         <div className={"backGround"}>
         <div className={"avatarContainer"}>
@@ -121,18 +130,20 @@ export const AvatarPage = () => {
                         <canvas id="canvasElement" className="videoEle hide"></canvas>
                     </div>
                 </div>
-                <TextArea>Push me!</TextArea>
+                <TextArea className="sentMessage">Hello, how are you?</TextArea>
                 <MessegeForm sendMsg={talk}></MessegeForm>
-                {!connection ? <Button style={{position: "relative", zIndex: 2}} onClick={() => {
-                        doInit()
-                    }}>Begin</Button> :
-                    <Button style={{position: "relative", zIndex: 2}} onClick={() => {
+                {!connection ? (
+                        <div></div>
+                    ) : (
+                    <Button style={{position: "absolute"}} onClick={() => {
                         if (sesionInternface) {
                             closeConnectionHandler(sesionInternface).then(() => {
                                 setConnection(false)
                             });
                         }
-                    }}>Close</Button>}
+                        navigateToInterview()
+                    }}>Close</Button> )
+                }
 
             </div>
         </div>
