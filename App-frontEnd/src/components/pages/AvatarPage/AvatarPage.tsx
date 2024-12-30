@@ -10,6 +10,7 @@ import "./AvatarPage.css"
 import {Button, TextArea} from "semantic-ui-react";
 import {MessegeForm} from "../../Inputs/Forms/MessegeForm/MessegeForm";
 import {useNavigate} from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const AvatarPage = () => {
     const avatarId = "Kristin_public_2_20240108";
@@ -46,6 +47,7 @@ export const AvatarPage = () => {
         }).then((value: any) => {
             // setHideLogo(true);
             // setSesionInterface(value)
+            console.log("Valoarea lui sessionInfo este", value)
             startSession(value);
         })
     }
@@ -122,31 +124,36 @@ export const AvatarPage = () => {
 
     return (
         <div className={"backGround"}>
-        <div className={"avatarContainer"}>
-            <div className={"avatarMain"}>
-                <div className="videoSectionWrap">
-                    <div className="videoWrap">
-                        <video id="mediaElement" className="videoEle show" autoPlay></video>
-                        <canvas id="canvasElement" className="videoEle hide"></canvas>
+            <div className={"avatarContainer"}>
+                <div className={"avatarMain"}>
+                    <div className="videoSectionWrap">
+                        <div className="videoWrap">
+                            <video id="mediaElement" className="videoEle show" autoPlay></video>
+                            <canvas id="canvasElement" className="videoEle hide"></canvas>
+                        </div>
                     </div>
-                </div>
-                <TextArea className="sentMessage">Hello, how are you?</TextArea>
-                <MessegeForm sendMsg={talk}></MessegeForm>
-                {!connection ? (
-                        <div></div>
-                    ) : (
-                    <Button style={{position: "absolute"}} onClick={() => {
+                    <div className="chatSectionWrap">
+                        <div className="demoMessages">
+                            <TextArea className="sentMessage">Hello, how are you?</TextArea>
+                            <TextArea className="sentResponse">I'm good, let's begin!</TextArea>
+                        </div>
+                        <MessegeForm sendMsg={talk} ></MessegeForm>
+                        {!connection && (
+                            <div style={{ color: "gray" }}>Initializing connection...</div>
+                        )}
+                    </div>
+                    <Button className="exitAvatarBtn" style={{ position: "absolute" }} onClick={async () => {
                         if (sesionInternface) {
-                            closeConnectionHandler(sesionInternface).then(() => {
-                                setConnection(false)
-                            });
+                            await closeConnectionHandler(sesionInternface);
+                            setConnection(false);
                         }
-                        navigateToInterview()
-                    }}>Close</Button> )
-                }
-
+                        navigateToInterview();
+                    }}>
+                        Exit
+                    </Button>
+                </div>
             </div>
         </div>
-        </div>
-    )
+    );
+
 }

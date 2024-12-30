@@ -20,10 +20,10 @@ export const MessegeForm = (props:MessegeFormInternface) =>{
             left: "14vh",
         }}>
             <Input className={"MessegeInput"} value={msg} onChange={(event)=>{setMsg(event.target.value)}}></Input>
-            <Button onClick={()=>{
+            <Button className="sendMessage" onClick={()=>{
                 props.sendMsg(msg)
                 setMsg("")
-            }}>Send!</Button>
+            }}>Send</Button>
         </div>
     )
 }
