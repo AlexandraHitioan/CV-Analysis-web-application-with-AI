@@ -1,7 +1,7 @@
 .leftSection2{
     width: 35vw;
     left: 10vw;
-    top: 14vw;
+    top: 13vw;
     position: absolute;
 }
 
@@ -30,7 +30,7 @@
     color: #919DC3;
     text-align: left;
     position: absolute;
-    top : 9vw;
+    top : 8vw;
     left: 3.7vw;
 }
 
@@ -49,4 +49,16 @@
 .rightSection2{
     position: absolute;
     left: 52vw;
+}
+
+.ui.selection.dropdown{
+    background-color: #38405A;
+    color: #C1CEF5;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    width: 300px;
+    position: relative;
+    top: 170px;
+    left: 55px;
+
 }

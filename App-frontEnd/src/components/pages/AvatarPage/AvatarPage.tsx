@@ -139,7 +139,8 @@ export const AvatarPage = () => {
                         </div>
                         <MessegeForm sendMsg={talk} ></MessegeForm>
                         {!connection && (
-                            <div style={{ color: "gray" }}>Initializing connection...</div>
+                            // <div className="initializeConnection">Initializing connection...</div>
+                            <img className="initializeConnection" src={"https://media.tenor.com/CY7LvPZrd-UAAAAi/circle-loading.gif"} style={{width:"50px", height:"20"}}/>
                         )}
                     </div>
                     <Button className="exitAvatarBtn" style={{ position: "absolute" }} onClick={async () => {
