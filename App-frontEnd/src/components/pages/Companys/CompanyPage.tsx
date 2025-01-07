@@ -1,4 +1,4 @@
-import "./DocumentPage.css"
+import "./CompanyPage.css"
 import {Button, Divider} from "semantic-ui-react";
 import {NavBar} from '../../NavBar/NavBar';
 import {SimpleTable, SimpleTableProps} from "../../Inputs/Table/SimpleTable";
@@ -6,10 +6,12 @@ import FormModal from "../../Modals/Dialog/FormModal/FormModal";
 import React, {useState} from "react";
 import {DocumentForm} from "../../Inputs/Forms/DocumentForm/DocumentForm";
 import {DocumentTable, DocumentTableProps} from "../../Inputs/Table/DocumentTable";
+import {useNavigate} from "react-router-dom";
 
-export const DocumentPage = (props: any) => {
-    const names = ["Position", "Skills", "Points of experince"];
-    const [values, setValues] = useState([["SoftDev", "Python,React", "10/10"]])
+export const CompanyPage = (props: any) => {
+    const nav = useNavigate();
+    const names = ["Position Available", "Skills Needed", "Close"];
+    const [values, setValues] = useState([["SoftDeveloper", "Python,React", "80% Interview"]])
     const data: DocumentTableProps = {
         deleteDocument: (index: number) => {
             const newItems = values.filter((_, i) => i !== index);
@@ -34,7 +36,7 @@ export const DocumentPage = (props: any) => {
                 </div>
 
                 <div className={"tableDiv"}>
-                    <Button onClick={() => setOpen(true)} className={"activeTitleButton"}>Upload document CV</Button>
+                    <Button onClick={() => {nav("/CompanyDocumentPage")}} className={"activeTitleButton"}>Go to CV</Button>
                     <DocumentTable props={data}/>
                 </div>
             </div>

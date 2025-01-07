@@ -7,8 +7,10 @@ import {
 } from "../../../services/hygen/AvatarService";
 import {useEffect, useState} from "react";
 import "./AvatarPage.css"
-import {Button} from "semantic-ui-react";
+import {Button, TextArea} from "semantic-ui-react";
 import {MessegeForm} from "../../Inputs/Forms/MessegeForm/MessegeForm";
+import {useNavigate} from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const AvatarPage = () => {
     const avatarId = "Kristin_public_2_20240108";
@@ -19,7 +21,7 @@ export const AvatarPage = () => {
     const [canvasElement, setCanvasElement] = useState<Element | null>(null);
     const [visibleCanvasElement, setVisibleCanvasElement] = useState(false);
     const background = "url(\"'https://www.cleanpng.com/png-background-transparent-png-clipart-4998260/'\") center / contain no-repeat"
-
+    const navigate = useNavigate();
 
     const updateStatus = (message: any, priority?: number) => {
         if (priority === undefined) {
@@ -45,6 +47,7 @@ export const AvatarPage = () => {
         }).then((value: any) => {
             // setHideLogo(true);
             // setSesionInterface(value)
+            console.log("Valoarea lui sessionInfo este", value)
             startSession(value);
         })
     }
@@ -111,28 +114,47 @@ export const AvatarPage = () => {
         }
     }
 
-    return (
-        <div className={"avatarContainer"}>
-            <div className={"avatarMain"}>
-                <div className="videoSectionWrap">
-                    <div className="videoWrap">
-                        <video id="mediaElement" className="videoEle show" autoPlay></video>
-                        <canvas id="canvasElement" className="videoEle hide"></canvas>
-                    </div>
-                </div>
-                <MessegeForm sendMsg={talk}></MessegeForm>
-                {!connection ? <Button style={{position: "relative", zIndex: 2}} onClick={() => {
-                        doInit()
-                    }}>Begin</Button> :
-                    <Button style={{position: "relative", zIndex: 2}} onClick={() => {
-                        if (sesionInternface) {
-                            closeConnectionHandler(sesionInternface).then(() => {
-                                setConnection(false)
-                            });
-                        }
-                    }}>Close</Button>}
+    const navigateToInterview = () => {
+        navigate("/Interview")
+    }
 
+    useEffect (() => {
+        doInit()
+    }, []);
+
+    return (
+        <div className={"backGround"}>
+            <div className={"avatarContainer"}>
+                <div className={"avatarMain"}>
+                    <div className="videoSectionWrap">
+                        <div className="videoWrap">
+                            <video id="mediaElement" className="videoEle show" autoPlay></video>
+                            <canvas id="canvasElement" className="videoEle hide"></canvas>
+                        </div>
+                    </div>
+                    <div className="chatSectionWrap">
+                        <div className="demoMessages">
+                            <TextArea className="sentMessage">Hello, how are you?</TextArea>
+                            <TextArea className="sentResponse">I'm good, let's begin!</TextArea>
+                        </div>
+                        <MessegeForm sendMsg={talk} ></MessegeForm>
+                        {!connection && (
+                            // <div className="initializeConnection">Initializing connection...</div>
+                            <img className="initializeConnection" src={"https://media.tenor.com/CY7LvPZrd-UAAAAi/circle-loading.gif"} style={{width:"50px", height:"20"}}/>
+                        )}
+                    </div>
+                    <Button className="exitAvatarBtn" style={{ position: "absolute" }} onClick={async () => {
+                        if (sesionInternface) {
+                            await closeConnectionHandler(sesionInternface);
+                            setConnection(false);
+                        }
+                        navigateToInterview();
+                    }}>
+                        Exit
+                    </Button>
+                </div>
             </div>
         </div>
-    )
+    );
+
 }

@@ -7,3 +7,12 @@
 .ui.input.MessegeInput>input{
     border-radius:20px !important;
 }
+
+.ui.button.sendMessage{
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    background-color: #4260D8;
+}

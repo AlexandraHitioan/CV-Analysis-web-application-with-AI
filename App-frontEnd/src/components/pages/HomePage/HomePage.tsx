@@ -37,6 +37,17 @@ export const HomePage = () => {
         <div>
             <div className={"backGround"}>
                 <div className={"appView"}>
+                    <div className="textContainer">
+                        {/*<h1 className="h1homePage">Home Page</h1>*/}
+                        <h2 className="h2helloUser">Welcome, user!</h2>
+                        <p className="notificationText">You have *N* notifications!</p>
+                        <p className="informationText">
+                            Document Page: Upload your document here! <br />
+                            Interview Page: Start your interview here! <br />
+                            Companies Page: Check out the companies suited for you here!
+                        </p>
+                    </div>
+
                     {/*<FormModal modalTitle={"Upload your document"} form={(<DocumentForm/>)} open={state} setOpen={setState} style={{}}/>*/}
                     {/*<Button onClick={()=>setState(true)}></Button>*/}
                     {/*<Button onClick={() => setState(true)}>*/}
